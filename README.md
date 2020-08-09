@@ -47,4 +47,8 @@ services:
 
   * 'f': Read-modify-write workload
 
+* RECORD_COUNT - number of records loaded. defaults to '10000'
+* OPERATION_COUNT - number of operations run. defaults to '1000'
+* LOAD_THREADS - number of threads during load phase. defaults to '10'
+* RUN_THREADS - number of threads during run operations phase. defaults to '4'
 
