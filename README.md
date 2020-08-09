@@ -19,12 +19,9 @@ services:
   mongo:
     image: mongo:latest
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongo
-      - MONGO_INITDB_ROOT_PASSWORD=mongo123
       - MONGO_INITDB_DATABASE=test
     ports:
       - "27017:27017"
-    # command: ["-f", "/etc/mongod.conf"]
 ```
 
 * Run ```docker-compose up```
