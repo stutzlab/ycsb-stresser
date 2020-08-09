@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+
+  ycsb-stresser:
+    build: .
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/test?w=0
+      - WORKLOAD_TYPE=a
+      # - MONGO_URL=mongodb://myDBReader:D1fficultP%40ssw0rd@mongos0.example.com:27017,mongos1.example.com:27017,mongos2.example.com:27017/?authSource=admin
+    # command: sleep 9999
+
+  mongo:
+    image: mongo:latest
+    environment:
+      # - MONGO_INITDB_ROOT_USERNAME=root
+      # - MONGO_INITDB_ROOT_PASSWORD=mongo123
+      - MONGO_INITDB_DATABASE=test
+    ports:
+      - "27017:27017"
+    # command: ["-f", "/etc/mongod.conf"]
+  
+  
